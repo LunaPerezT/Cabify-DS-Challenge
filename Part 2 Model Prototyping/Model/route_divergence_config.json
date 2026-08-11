@@ -1,0 +1,68 @@
+{
+  "features": [
+    "len_est",
+    "len_real",
+    "len_ratio",
+    "len_rel_diff",
+    "detour_ratio",
+    "start_gap",
+    "end_gap",
+    "endpoint_gap_norm",
+    "dist_mean",
+    "dist_median",
+    "dist_p90",
+    "dist_max",
+    "dist_mean_norm",
+    "dist_p90_norm",
+    "hausdorff_norm",
+    "asym_gap",
+    "overlap_10m",
+    "overlap_25m",
+    "overlap_50m",
+    "overlap_100m",
+    "overlap_200m",
+    "longest_deviation_m",
+    "longest_deviation_frac",
+    "n_deviation_episodes",
+    "deviated_frac",
+    "area_between_norm",
+    "bearing_diff_mean",
+    "bearing_diff_p90",
+    "bbox_iou",
+    "frechet",
+    "frechet_norm",
+    "dtw_norm",
+    "n_pts_est",
+    "n_pts_real"
+  ],
+  "decision": {
+    "accept_below": 0.0408,
+    "flag_above": 0.51,
+    "cost_missed_divergence": 12.0,
+    "cost_needless_flag": 1.0,
+    "cost_review": 0.49,
+    "review_capacity_target": 0.25
+  },
+  "training": {
+    "journeys": 2386,
+    "annotations": 3027,
+    "cities": 28,
+    "target": "soft label, 'I don't know' counted as half a vote",
+    "sample_weight": "annotations per journey"
+  },
+  "out_of_fold": {
+    "roc_auc": 0.9902,
+    "pr_auc": 0.9931,
+    "brier": 0.0402,
+    "grouped_by_city_roc_auc": 0.9904,
+    "evaluated_on": 2212
+  },
+  "feature_module_sha256": "e10423668ffb2b35",
+  "versions": {
+    "python": "3.12.3",
+    "sklearn": "1.8.0",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2"
+  },
+  "created": "2026-08-11"
+}
